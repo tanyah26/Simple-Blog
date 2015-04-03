@@ -1,0 +1,24 @@
+
+	@import "imports/utils.less";
+	@import "imports/grid-config.less";
+	@import "imports/grid-functions.less";
+
+ 	// !Reset Box-sizing
+	*,
+	*:before,
+	*:after {
+		behavior: url(boxsizing.htc);
+	}
+
+ 	// !Dekstop, IE Specific
+ 	.@{fs-grid-class-container} .@{fs-grid-class-row} {
+ 		width: @fs-grid-width-lg;
+
+ 		.generateGridBase(@fs-grid-class-lg);
+
+ 		.generateGrid(@fs-grid-class-lg, @fs-grid-columns-lg);
+
+ 		.@{fs-grid-class-cell}.@{fs-grid-class-padded} {
+			behavior: none;
+		}
+ 	}

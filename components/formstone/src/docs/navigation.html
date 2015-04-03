@@ -1,0 +1,45 @@
+<style>
+	.navigation { margin: 0 0 20px; overflow: hidden; }
+	.navigation a { background: #c65032; border: none; color: #fff; display: block; float: left; font-size: 16px; line-height: 40px; margin: 0 1px 0 0; padding: 0 20px; }
+	.navigation a:hover { color: #fff; }
+
+	.navigation.fs-navigation-enabled a { float: none; margin: 0 0 1px 0; width: 100%; }
+	.navigation.fs-navigation-enabled { padding: 10px; }
+</style>
+
+<script>
+	$(function() {
+		$(".navigation a").on("click", function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+		});
+
+		$(".navigation").navigation();
+	});
+</script>
+
+<h4>Basic</h4>
+<h5 id="nav_handle_1">Navigation</h5>
+<nav class="navigation" data-navigation-handle="#nav_handle_1">
+	<a href="#">Home</a>
+	<a href="#">About</a>
+	<a href="#">Contact</a>
+</nav>
+
+<h4>Breakpoint</h4>
+<h5 id="nav_handle_2">Navigation</h5>
+<nav class="navigation" data-navigation-handle="#nav_handle_2" data-navigation-options='{"maxWidth":"740px"}'>
+	<a href="#">Home</a>
+	<a href="#">About</a>
+	<a href="#">Contact</a>
+</nav>
+
+<!--
+<h4>Overlay</h4>
+<h5 id="nav_handle_3">Navigation</h5>
+<nav class="navigation" data-navigation-handle="#nav_handle_3" data-navigation-options='{"type":"overlay"}'>
+	<a href="#">Home</a>
+	<a href="#">About</a>
+	<a href="#">Contact</a>
+</nav>
+-->

@@ -7,7 +7,7 @@
 */
 ?>
 <?php if ( ! dynamic_sidebar( 'simple-sidebar' ) ) : // If the user hasn't defined any specific widgets in the admin yet, display a couple dummy widgets, as written below ?>
-<aside>
+<!-- <aside>
 	<h3><?php _e( 'Archives', 'simple' ); // Wordpress archives widget ?></h3>
 	<ul>
 		<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
@@ -20,5 +20,5 @@
 		<li><?php wp_loginout(); ?></li>
 		<?php wp_meta(); ?>
 	</ul>
-</aside>
+</aside> -->
 <?php endif; // end sidebar widget area ?>
